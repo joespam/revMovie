@@ -27,9 +27,9 @@
     <%= f.text_field :director %>
   </div>
   <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.text_field :rating %>
-  </div>  <div class="field">
+    <div id="star-rating"></div>
+  </div>  
+  <div class="field">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
   </div>
@@ -37,3 +37,10 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<script>
+  $('#star-rating').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  });
+</script>
